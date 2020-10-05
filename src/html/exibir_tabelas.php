@@ -23,7 +23,7 @@
  <!-- Preenchendo a tabela com os dados do banco: -->
  <?php
   require "../funcoes/conectar.php";
-  require "../funcoes/funcoes.php";
+  //require "../funcoes/funcoes.php";
 
   $responsavel = $_POST['responsavel'];
   $situacao = $_POST['situacao'];

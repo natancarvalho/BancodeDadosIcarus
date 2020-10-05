@@ -1,3 +1,16 @@
+<?php
+  $caminho = $_SERVER['PHP_SELF'];
+        
+  session_start();      
+
+  $ehRotaDeLogin = stripos($caminho, 'login');
+
+  if (isset($_SESSION['usuario_logado'])) {
+      header('Location: /bdicarus/src/html/home.php');
+      exit();
+  }
+ 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -17,13 +17,13 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" action="../funcoes/login.php" method="post">
       <a href="home.php"> <img class="mb-4" src="../../images/Lgicarus.png" alt="" width="150" height="77">  </a>
       <h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
       <label for="inputEmail" class="sr-only">Endereço de email</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
+      <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Seu email" required autofocus>
       <label for="inputPassword" class="sr-only">Senha</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Lembrar de mim
