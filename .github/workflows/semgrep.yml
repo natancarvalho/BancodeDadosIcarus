@@ -1,0 +1,24 @@
+#.gitlab/semgrep.yml
+name: Semgrep Scan
+
+on:
+  pull_request: 
+    branches: ["main"]
+    
+jobs:
+  semgrep-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep CI
+        run: semgrep ci
+        env:
+          SEMGREP_RULES: p/default
